@@ -10,10 +10,10 @@ html, body {
   margin: 0;
   height: 100%;
   background: black;
+  cursor: pointer;
   font-family: Futura, "Futura PT", "Futura Std", "Avenir Next", Helvetica, Arial, sans-serif;
 }
 
-/* imagen ocupa toda la pantalla */
 .bg {
   position: fixed;
   top: 0;
@@ -23,7 +23,6 @@ html, body {
   object-fit: cover;
 }
 
-/* texto centrado grande */
 .title {
   position: fixed;
   top: 50%;
@@ -33,16 +32,13 @@ html, body {
   font-size: 8vw;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  text-align: center;
-  white-space: nowrap;
 }
 </style>
-
 </head>
-<body>
 
-<img src="./download.gif" class="bg" alt="ESTEL"/>
+<body onclick="window.location.href='estel.html'">
 
+<img src="./download.gif" class="bg">
 <div class="title">ESTEL</div>
 
 </body>
