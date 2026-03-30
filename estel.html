@@ -1,115 +1,3 @@
-Veo el problema: tienes un archivo llamado **`about`**. Ese archivo probablemente está interfiriendo con la navegación o fue creado accidentalmente.
-
-Tu repo ahora:
-
-```
-about      ❌
-download.gif
-estel.html
-index.html
-```
-
-Haz esto:
-
-1. Borra **about**
-
-   * click en `about`
-   * icono papelera (Delete file)
-   * Commit
-
-Debe quedar:
-
-```
-download.gif
-estel.html
-index.html
-```
-
-Luego usa estos dos archivos **definitivos**.
-
-## index.html
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ESTEL</title>
-
-<style>
-html,body{
-margin:0;
-height:100%;
-background:black;
-font-family:Futura,"Futura PT","Futura Std","Avenir Next",Helvetica,Arial,sans-serif;
-}
-
-.link{
-display:block;
-height:100%;
-width:100%;
-}
-
-.bg{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-.title{
-position:fixed;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-color:white;
-font-size:8vw;
-letter-spacing:.25em;
-text-transform:uppercase;
-}
-
-footer{
-position:fixed;
-bottom:20px;
-left:50%;
-transform:translateX(-50%);
-color:white;
-font-size:11px;
-letter-spacing:.18em;
-text-transform:uppercase;
-display:flex;
-gap:10px;
-align-items:center;
-}
-</style>
-</head>
-
-<body>
-
-<a href="estel.html" class="link">
-<img src="download.gif" class="bg">
-<div class="title">ESTEL</div>
-</a>
-
-<footer>
-Mercedes Quevedo — Konstfack
-<a href="https://www.instagram.com/mercedesquevedo" target="_blank">
-<svg width="14" height="14" viewBox="0 0 24 24" fill="white">
-<path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 4.5A5.5 5.5 0 0 0 6.5 12 5.5 5.5 0 0 0 12 17.5 5.5 5.5 0 0 0 17.5 12 5.5 5.5 0 0 0 12 6.5z"/>
-</svg>
-</a>
-</footer>
-
-</body>
-</html>
-```
-
-## estel.html
-
-```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -120,15 +8,15 @@ Mercedes Quevedo — Konstfack
 <style>
 body{
 margin:0;
-background:black;
-color:white;
+background:white;
+color:black;
 font-family:Futura,"Futura PT","Futura Std","Avenir Next",Helvetica,Arial,sans-serif;
 }
 
 .container{
 max-width:900px;
 margin:auto;
-padding:80px 20px 120px;
+padding:80px 20px 140px;
 text-align:center;
 }
 
@@ -136,16 +24,23 @@ h1{
 letter-spacing:.25em;
 font-size:40px;
 margin-bottom:40px;
+text-transform:uppercase;
 }
 
 p{
 line-height:1.7;
 font-size:18px;
+margin-bottom:50px;
 }
 
-img{
+.specs{
 width:100%;
-margin-top:40px;
+margin:40px 0 20px 0;
+}
+
+.gif{
+width:100%;
+margin-top:30px;
 }
 
 footer{
@@ -153,13 +48,17 @@ position:fixed;
 bottom:20px;
 left:50%;
 transform:translateX(-50%);
-color:white;
+color:black;
 font-size:11px;
 letter-spacing:.18em;
 text-transform:uppercase;
 display:flex;
 gap:10px;
 align-items:center;
+}
+
+footer svg{
+fill:black;
 }
 </style>
 </head>
@@ -174,14 +73,16 @@ align-items:center;
 ESTEL (star/ trace of light in Catalan), brings together ceramics and wood in a calm, modular structure that celebrates flexibility and freedom of choice. The ceramic surfaces feature carved illustrations that interact with the light, allowing it to pass through the different openings and etched lines, creating gentle variations of glow and shadow. Designed as a repeatable unit, ESTEL can stand alone or be combined into larger constellations, adapting to different spaces and always finished according to the wishes of the owner.
 </p>
 
-<img src="download.gif">
+<img src="specs.png" class="specs">
+
+<img src="download.gif" class="gif">
 
 </div>
 
 <footer>
 Mercedes Quevedo — Konstfack
 <a href="https://www.instagram.com/mercedesquevedo" target="_blank">
-<svg width="14" height="14" viewBox="0 0 24 24" fill="white">
+<svg width="14" height="14" viewBox="0 0 24 24">
 <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 4.5A5.5 5.5 0 0 0 6.5 12 5.5 5.5 0 0 0 12 17.5 5.5 5.5 0 0 0 17.5 12 5.5 5.5 0 0 0 12 6.5z"/>
 </svg>
 </a>
@@ -189,4 +90,3 @@ Mercedes Quevedo — Konstfack
 
 </body>
 </html>
-```
